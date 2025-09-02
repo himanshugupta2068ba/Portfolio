@@ -63,7 +63,7 @@ function DrawerAppBar(props) {
       <AppBar
         component="nav"
         sx={{
-          background: "linear-gradient(90deg, #1f1f1fff, #3d3d3dff, #333333)",
+          background: "linear-gradient(90deg, #1f1f1fff, #212121ff, #1e1d1dff)",
           boxShadow: "0px 4px 20px rgba(0,0,0,0.6)",
         }}
       >
