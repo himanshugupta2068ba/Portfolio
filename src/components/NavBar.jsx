@@ -38,7 +38,7 @@ function DrawerAppBar(props) {
         sx={{
           my: 2,
           fontWeight: "bold",
-          background: "linear-gradient(45deg, #b3b0b0ff, #aaaaaa)",
+          background: "linear-gradient(45deg, #b3b0b0ff, #30087f92)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}
@@ -84,7 +84,7 @@ function DrawerAppBar(props) {
               flexGrow: 1,
               fontWeight: "bold",
               letterSpacing: 1,
-              background: "linear-gradient(45deg, #b3b0b0ff, #aaaaaa)",
+              background: "linear-gradient(45deg, #b19fdab5, #aaaaaa)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

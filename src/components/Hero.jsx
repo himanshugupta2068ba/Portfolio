@@ -26,7 +26,7 @@ const Hero = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(145deg, #232323ff, #171717ff)", // page bg
+       background: "linear-gradient(145deg, #151515ff, #171717ff)",
       }}
     >
       {/* Rectangular Box with Curved Edges */}
