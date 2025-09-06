@@ -11,7 +11,8 @@ const About = () => {
         alignItems: "center",
         justifyContent: "center",
         background: "linear-gradient(145deg, #151515ff, #171717ff)",
-        py: { xs: 5, md: 0 },
+        py: { xs: 8, md: 4 },
+        pt: { xs: '56px', sm: '64px' }, // match Hero/AppBar spacing
       }}
     >
       {/* Rectangular Glass Box */}

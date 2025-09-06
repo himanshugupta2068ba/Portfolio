@@ -26,7 +26,8 @@ const Hero = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-       background: "linear-gradient(145deg, #151515ff, #171717ff)",
+        background: "linear-gradient(145deg, #151515ff, #171717ff)",
+        pt: { xs: '56px', sm: '64px' }, // match AppBar height
       }}
     >
       {/* Rectangular Box with Curved Edges */}
@@ -67,7 +68,7 @@ const Hero = () => {
                   <Box
                     component="span"
                     sx={{
-                      background: "linear-gradient(45deg, #ff6ec4, #7873f5, #3bd1d3)",
+                      background: "linear-gradient(45deg, #b25dd399, #6e6ac6ff, #3e508b8c)",
                       backgroundSize: "200% auto",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
@@ -115,7 +116,7 @@ const Hero = () => {
               size="large"
               sx={{
                 borderRadius: "30px",
-                background: "linear-gradient(45deg, #8300d458, #3f51b5)",
+                background: "linear-gradient(45deg, #8300d458, #2e1fb3a7)",
                 px: 4,
                 py: 1.5,
                 textTransform: "none",
