@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import { Box, Typography, TextField, Button, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { FaInstagram, FaGithub, FaLinkedin, FaPhone } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -13,18 +12,17 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // from EmailJS
-        "YOUR_TEMPLATE_ID", // from EmailJS
+        "service_xxxxxx", // 🔥 replace with your EmailJS Service ID
+        "template_xxxxxx", // 🔥 replace with your EmailJS Template ID
         form.current,
-        "YOUR_PUBLIC_KEY" // from EmailJS
+        "YOUR_PUBLIC_KEY" // 🔥 replace with your EmailJS Public Key
       )
       .then(
-        () => {
-          alert("Message sent successfully ✅");
-          form.current.reset();
+        (result) => {
+          alert("Message Sent Successfully!");
         },
         (error) => {
-          alert("❌ Failed to send message: " + error.text);
+          alert("Failed to send message, please try again.");
         }
       );
   };
@@ -32,22 +30,26 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
         width: "100vw",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         background: "linear-gradient(145deg, #151515ff, #171717ff)",
-        py: { xs: 8, md: 4 },
-        pt: { xs: "56px", sm: "64px" },
+        py: { xs: 8, md: 10 }, // ✅ same spacing as Skills
+        pt: { xs: "56px", sm: "64px" }, // match AppBar spacing
       }}
     >
+      {/* Glass Card Box */}
       <Box
+        component={motion.div}
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
         sx={{
           background: "rgba(255, 255, 255, 0.05)",
           borderRadius: "24px",
           padding: { xs: 4, sm: 6, md: 8 },
-          maxWidth: "900px",
+          maxWidth: "1200px", // ✅ aligned with About, Skills, Projects
           width: "90%",
           boxShadow: "0px 8px 30px rgba(0,0,0,0.4)",
           backdropFilter: "blur(8px)",
@@ -59,7 +61,7 @@ const Contact = () => {
           sx={{
             fontWeight: "bold",
             color: "white",
-            mb: 5,
+            mb: 4,
             fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
           }}
         >
@@ -75,8 +77,8 @@ const Contact = () => {
                 name="user_name"
                 fullWidth
                 required
-                variant="outlined"
-                sx={{ bgcolor: "white", borderRadius: "8px" }}
+                InputLabelProps={{ style: { color: "#aaa" } }}
+                sx={{ input: { color: "white" } }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -86,33 +88,32 @@ const Contact = () => {
                 type="email"
                 fullWidth
                 required
-                variant="outlined"
-                sx={{ bgcolor: "white", borderRadius: "8px" }}
+                InputLabelProps={{ style: { color: "#aaa" } }}
+                sx={{ input: { color: "white" } }}
               />
             </Grid>
             <Grid item xs={12}>
               <TextField
-                label="Message"
+                label="Your Message"
                 name="message"
                 multiline
-                rows={5}
+                rows={4}
                 fullWidth
                 required
-                variant="outlined"
-                sx={{ bgcolor: "white", borderRadius: "8px" }}
+                InputLabelProps={{ style: { color: "#aaa" } }}
+                sx={{ textarea: { color: "white" } }}
               />
             </Grid>
             <Grid item xs={12}>
               <Button
                 type="submit"
                 variant="contained"
+                fullWidth
                 sx={{
-                  bgcolor: "#8300d4",
+                  background: "#8300d4",
                   color: "white",
-                  px: 4,
-                  py: 1.5,
-                  fontSize: "1rem",
-                  "&:hover": { bgcolor: "#9a00ff" },
+                  fontWeight: "bold",
+                  "&:hover": { background: "#5a00a3" },
                 }}
               >
                 Send Message
@@ -121,52 +122,31 @@ const Contact = () => {
           </Grid>
         </form>
 
-        {/* Social Icons */}
+        {/* Social Links */}
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
-            gap: 3,
+            gap: 4,
             mt: 5,
+            flexWrap: "wrap",
           }}
         >
-          <motion.a
-            href="https://instagram.com/YOUR_USERNAME"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.2 }}
-          >
-            <FaInstagram size={40} color="#E4405F" />
-          </motion.a>
-
-          <motion.a
-            href="https://github.com/YOUR_USERNAME"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.2 }}
-          >
-            <FaGithub size={40} color="#fff" />
-          </motion.a>
-
-          <motion.a
-            href="https://linkedin.com/in/YOUR_USERNAME"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.2 }}
-          >
-            <FaLinkedin size={40} color="#0077B5" />
-          </motion.a>
-
-          <motion.a
-            href="mailto:himanshugupta2068ba@gmail.com"
-            whileHover={{ scale: 1.2 }}
-          >
-            <SiGmail size={40} color="#EA4335" />
-          </motion.a>
-
-          <motion.a href="tel:+917007585510" whileHover={{ scale: 1.2 }}>
-            <FaPhone size={40} color="#25D366" />
-          </motion.a>
+          {/* <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={32} color="white" />
+          </a> */}
+          <a href="https://github.com/himanshugupta2068ba" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={32} color="white" />
+          </a>
+          <a href="https://www.linkedin.com/in/himanshu212b/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={32} color="white" />
+          </a>
+          {/* <a href="mailto:himanshugupta2068ba@gmail.com">
+            <FaEnvelope size={32} color="white" />
+          </a> */}
+          <a href="tel:+917007585510">
+            <FaPhone size={32} color="white" />
+          </a>
         </Box>
       </Box>
     </Box>

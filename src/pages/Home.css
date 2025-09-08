@@ -1,6 +1,7 @@
 .home {
   min-height: 100vh;
-  width: 100%;
+  width: 100vh;
+  /* color: white; */
   background: linear-gradient(135deg, #1f1f1f, #1b1a1a); /* dark theme */
 }
 

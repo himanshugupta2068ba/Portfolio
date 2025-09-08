@@ -20,6 +20,7 @@ const Hero = () => {
 
   return (
     <Box
+  id="home"
       sx={{
         height: "100vh",
         width: "100vw",
@@ -28,6 +29,7 @@ const Hero = () => {
         justifyContent: "center",
         background: "linear-gradient(145deg, #151515ff, #171717ff)",
         pt: { xs: '56px', sm: '64px' }, // match AppBar height
+         overflowX: "hidden",
       }}
     >
       {/* Rectangular Box with Curved Edges */}
@@ -133,7 +135,7 @@ const Hero = () => {
           {/* Right Side - Image */}
           <Box
   component="img"
-  src="/Himanshu.jpg"
+  src="/Himanshu2.jpg"
   alt="Himanshu"
   sx={{
     width: { xs: "65%", sm: "55%", md: "70%" },

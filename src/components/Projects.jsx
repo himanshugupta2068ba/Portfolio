@@ -11,26 +11,27 @@ const projects = [
   {
     title: "HIMX Meet",
     description: "Video conferencing app with real-time chat.",
-    image: "himx-meet.png",
+    image: "Himxmeet.png",
     link: "#",
   },
   {
     title: "Wonder-Lost",
     description: "Hotel booking website with admin panel.",
-    image: "wonder-lost.png",
+    image: "wonderlost.png",
     link: "#",
   },
-  {
-    title: "Mobile Game",
-    description: "Puzzle game made with Unity.",
-    image: "/projects/game.png",
-    link: "#",
-  },
+  // {
+  //   title: "Mobile Game",
+  //   description: "Puzzle game made with Unity.",
+  //   image: "/projects/game.png",
+  //   link: "#",
+  // },
 ];
 
 const Projects = () => {
   return (
     <Box
+      id="projects"
       sx={{
         minHeight: "100vh",
         width: "100vw",
@@ -40,6 +41,7 @@ const Projects = () => {
         background: "linear-gradient(145deg, #151515ff, #171717ff)",
         py: { xs: 8, md: 4 },
         pt: { xs: "56px", sm: "64px" },
+         overflowX: "hidden",
       }}
     >
       {/* Glass Box */}
@@ -68,13 +70,13 @@ const Projects = () => {
         </Typography>
 
         {/* Cards Grid */}
-        <Grid container spacing={4}>
+        <Grid container spacing={6} justifyContent="center">
           {projects.map((project, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <Card
                 sx={{
                   background: "rgba(255, 255, 255, 0.1)",
-                  borderRadius: "16px",
+                  borderRadius: "18px",
                   boxShadow: "0px 4px 20px rgba(0,0,0,0.4)",
                   height: "100%",
                   display: "flex",

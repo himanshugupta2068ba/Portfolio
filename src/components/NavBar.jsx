@@ -15,7 +15,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
 const drawerWidth = 240;
-const navItems = ["Index", "About", "Contact"];
+// Map nav items with IDs of sections in your page
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "#about" },
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" },
+];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -23,6 +30,15 @@ function DrawerAppBar(props) {
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  // Smooth scroll to section
+  const handleNavClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileOpen(false); // close drawer on mobile
   };
 
   const container =
@@ -47,9 +63,9 @@ function DrawerAppBar(props) {
       </Typography>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} sx={{ color: "#fff" }} />
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton component="a" href={item.href} sx={{ textAlign: "center" }}>
+              <ListItemText primary={item.label} sx={{ color: "#fff" }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -94,14 +110,16 @@ function DrawerAppBar(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.label}
+                component="a"
+                href={item.href}
                 sx={{
                   color: "#fff",
                   fontWeight: 500,
                   "&:hover": { background: "rgba(255, 255, 255, 0.15)" },
                 }}
               >
-                {item}
+                {item.label}
               </Button>
             ))}
           </Box>
@@ -140,3 +158,4 @@ DrawerAppBar.propTypes = {
 };
 
 export default DrawerAppBar;
+

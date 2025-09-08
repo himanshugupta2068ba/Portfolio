@@ -4,6 +4,7 @@ import DrawerAppBar from '../components/NavBar'
 import ProjectSection from '../components/Projects';
 import Skills from '../components/Skill';
 import Contact from '../components/contact';
+import Footer from '../components/footer';
 import "./Home.css"
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <ProjectSection />
       <Skills />
       <Contact />
+      <Footer />
     </div>
   )
 }

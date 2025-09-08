@@ -42,6 +42,7 @@ const Skills = () => {
 
   return (
     <Box
+  id="skills"
       sx={{
         minHeight: "100vh",
         width: "100vw",
@@ -51,6 +52,7 @@ const Skills = () => {
         background: "linear-gradient(145deg, #151515ff, #171717ff)",
         py: { xs: 8, md: 4 },
         pt: { xs: "56px", sm: "64px" },
+         overflowX: "hidden",
       }}
     >
       <Box
