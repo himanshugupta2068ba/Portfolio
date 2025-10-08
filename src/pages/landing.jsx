@@ -3,6 +3,8 @@ import React from "react";
 import { Button } from "@mui/material";
 import "./Home.css";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 export default function LandingPage() {
   const handleHireClick = () => {
     console.log("Hire Me button clicked");
@@ -11,6 +13,7 @@ export default function LandingPage() {
   "_blank"
 );
   };
+  const navigate = useNavigate();
 
   return (
     <div className="landing-page">
@@ -35,7 +38,7 @@ export default function LandingPage() {
           boxShadow: "0px 6px 15px rgba(165,124,0,0.6)",
         },
       }}
-      onClick={() => (window.location.href = "/home")}
+      onClick={() => navigate("/home")}
     >
       Portfolio
     </Button>
