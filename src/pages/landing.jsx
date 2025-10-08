@@ -1,61 +1,166 @@
 import { Github, Linkedin, Instagram, Mail } from "lucide-react";
-
+import React from "react";
+import { Button } from "@mui/material";
+import "./Home.css";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 export default function LandingPage() {
+  const handleHireClick = () => {
+    console.log("Hire Me button clicked");
+   window.open(
+  "https://mail.google.com/mail/?view=cm&fs=1&to=himanshu.gupta.developer@gmail.com&su=Hiring%20Inquiry%20from%20Portfolio&body=Hi%20Himanshu,%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20potential%20opportunity.",
+  "_blank"
+);
+  };
+
   return (
+    <div className="landing-page">
+    <div className="right-panel">
+  <div className="buttons-container">
+    <Button
+      variant="contained"
+      className="btn"
+      sx={{
+        background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+        color: "#fff",
+        fontWeight: "bold",
+        borderRadius: "30px",
+        px: 4,
+        py: 1.2,
+        fontSize: "1rem",
+        textTransform: "none",
+        boxShadow: "0px 4px 10px rgba(165,124,0,0.4)",
+        transition: "all 0.3s ease",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0px 6px 15px rgba(165,124,0,0.6)",
+        },
+      }}
+      onClick={() => (window.location.href = "/home")}
+    >
+      Portfolio
+    </Button>
+
+    <Button
+      variant="contained"
+      className="btn"
+      sx={{
+        background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+        color: "#fff",
+        fontWeight: "bold",
+        borderRadius: "30px",
+        px: 4,
+        py: 1.2,
+        fontSize: "1rem",
+        textTransform: "none",
+        boxShadow: "0px 4px 10px rgba(165,124,0,0.4)",
+        transition: "all 0.3s ease",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0px 6px 15px rgba(165,124,0,0.6)",
+        },
+      }}
+      onClick={handleHireClick}
+    >
+      Hire Me
+    </Button>
+
+    <Button
+      variant="contained"
+      className="btn"
+      sx={{
+        background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+        color: "#fff",
+        fontWeight: "bold",
+        borderRadius: "30px",
+        px: 4,
+        py: 1.2,
+        fontSize: "1rem",
+        textTransform: "none",
+        boxShadow: "0px 4px 10px rgba(165,124,0,0.4)",
+        transition: "all 0.3s ease",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0px 6px 15px rgba(165,124,0,0.6)",
+        },
+      }}
+      onClick={() => window.open("/resume.pdf", "_blank")}
+    >
+      View Resume
+    </Button>
+
+    <Button
+      variant="contained"
+      className="btn"
+      sx={{
+        background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+        color: "#fff",
+        fontWeight: "bold",
+        borderRadius: "30px",
+        px: 4,
+        py: 1.2,
+        fontSize: "1rem",
+        textTransform: "none",
+        boxShadow: "0px 4px 10px rgba(165,124,0,0.4)",
+        transition: "all 0.3s ease",
+        "&:hover": {
+          transform: "scale(1.05)",
+          boxShadow: "0px 6px 15px rgba(165,124,0,0.6)",
+        },
+      }}
+      href="/resume.pdf"
+      download="Himanshu_Gupta_Resume.pdf"
+    >
+      Download Resume
+    </Button>
+
     <div
-      className="fixed inset-0 w-full h-full bg-cover bg-center text-white flex items-center justify-center"
       style={{
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/landing.png')",
-        minHeight: "100vh",
-        minWidth: "100vw",
-        backgroundRepeat: "no-repeat", // Prevent image repeating
+        display: "flex",
+        gap: "15px",
+        justifyContent: "center",
+        marginTop: "20px",
       }}
     >
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-12 w-full max-w-3xl">
-        {/* Name */}
-        <h1 className="text-5xl md:text-7xl font-bold tracking-wide mb-4">
-          Hi, I’m <span className="text-blue-400">Himanshu</span>
-        </h1>
+      <a
+        href="https://github.com/himanshugupta2068ba"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ffd966" }}
+      >
+        <Github size={28} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/himanshu212b/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#ffd966" }}
+      >
+        <Linkedin size={28} />
+      </a>
+      <a
+          href="https://www.instagram.com/himanshu_gupta.37?igsh=d2YzZ3F6NHl1N29v"
+          target="_blank"
+          rel="noopener noreferrer"
+           style={{ color: "#ffd966" }}
+        >
+          <FaInstagram size={24} />
+        </a>
+    </div>
+<div className="content">
+  <h1 className="name">Himanshu Gupta</h1>
+  <p className="role">
+    <span style={{ color: "#be793dff", fontWeight: "bold" }}>Full Stack Developer</span> |{" "}
+    <span style={{ fontStyle: "italic" }}>Bringing pixels and APIs together</span>
+  </p>
+  <p style={{ marginTop: "8px", color: "#403e3eff", fontSize: "0.9rem" }}>
+    Passionate about building scalable web applications and crafting seamless user experiences.
+  </p>
+</div>
 
-        <p className="mt-2 text-lg md:text-2xl max-w-2xl mb-8">
-          Aspiring Developer | AI Enthusiast | Web3 Learner
-        </p>
+  </div>
+</div>
 
-        {/* Buttons */}
-        <div className="mt-4 flex flex-wrap gap-4 justify-center mb-10">
-          <a
-            href="#portfolio"
-            className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-2xl shadow-lg transition"
-          >
-            See My Portfolio
-          </a>
-          <a
-            href="mailto:your-email@example.com"
-            className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-2xl shadow-lg transition"
-          >
-            Hire Me
-          </a>
-        </div>
-
-        {/* Social Icons */}
-        <div className="flex gap-6 justify-center">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <Github className="w-7 h-7 hover:text-gray-300 transition" />
-          </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-            <Linkedin className="w-7 h-7 hover:text-blue-400 transition" />
-          </a>
-          <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <Instagram className="w-7 h-7 hover:text-pink-400 transition" />
-          </a>
-          <a href="mailto:your-email@example.com">
-            <Mail className="w-7 h-7 hover:text-red-400 transition" />
-          </a>
-        </div>
-      </div>
+      <div className="left-panel"></div>
     </div>
   );
 }
-

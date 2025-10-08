@@ -17,7 +17,7 @@ import ListItemText from "@mui/material/ListItemText";
 const drawerWidth = 240;
 // Map nav items with IDs of sections in your page
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/home" },
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
@@ -100,7 +100,7 @@ function DrawerAppBar(props) {
               flexGrow: 1,
               fontWeight: "bold",
               letterSpacing: 1,
-              background: "linear-gradient(45deg, #b19fdab5, #aaaaaa)",
+              background: "linear-gradient(90deg, #d2772cff, #c46e0cff)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

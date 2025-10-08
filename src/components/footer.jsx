@@ -42,13 +42,33 @@ export default function Footer() {
           <a href="#contact" style={{ color: "white" }}>Contact</a>
         </Box>
 
-        {/* Icons */}
-        <Box sx={{ display: "flex", justifyContent: "center", gap: 4, mb: 3 }}>
-          <FaGithub size={24} />
-          <FaLinkedin size={24} />
-          <FaInstagram size={24} />
-          <MdEmail size={24} />
-        </Box>
+      {/* Icons */}
+<Box sx={{ display: "flex", justifyContent: "center", gap: 4, mb: 3 }}>
+  <a
+    href="https://github.com/himanshugupta2068ba"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaGithub size={24} />
+  </a>
+  <a
+    href="https://www.linkedin.com/in/himanshu212b/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedin size={24} />
+  </a>
+  <a
+    href="https://www.instagram.com/himanshu_gupta.37?igsh=d2YzZ3F6NHl1N29v"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram size={24} />
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=himanshu.gupta.developer@gmail.com">
+    <MdEmail size={24} />
+  </a>
+</Box>
 
         {/* Tagline */}
         <Typography variant="body2" sx={{ mb: 1, opacity: 0.8 }}>

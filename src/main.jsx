@@ -6,7 +6,7 @@ import LandingPage from './pages/landing.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LandingPage/>
+    <App />
     {/* <App /> */}
   </StrictMode>,
 )

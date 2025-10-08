@@ -22,6 +22,7 @@ const Hero = () => {
     <Box
   id="home"
       sx={{
+        marginTop: "15px",
         height: "100vh",
         width: "100vw",
         display: "flex",
@@ -70,7 +71,7 @@ const Hero = () => {
                   <Box
                     component="span"
                     sx={{
-                      background: "linear-gradient(45deg, #b25dd399, #6e6ac6ff, #3e508b8c)",
+                      background: "linear-gradient(90deg, #a57c00, #c68439ff)",
                       backgroundSize: "200% auto",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
@@ -92,8 +93,8 @@ const Hero = () => {
     fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
     lineHeight: 1.6,
     pl: 2,
-    borderLeft: "4px solid #8300d4", // accent line
-    background: "linear-gradient(90deg, rgba(131,0,212,0.15), transparent)",
+    borderLeft: "4px solid #c46e18ff", // accent line
+    background: "linear-gradient(90deg, #a57c00, #c68439ff), transparent)",
     borderRadius: "8px",
     py: 1,
     animation: "fadeIn 2s ease-in-out",
@@ -113,23 +114,30 @@ const Hero = () => {
 
 
 
-            <Button
-              variant="contained"
-              size="large"
-              sx={{
-                borderRadius: "30px",
-                background: "linear-gradient(45deg, #8300d458, #2e1fb3a7)",
-                px: 4,
-                py: 1.5,
-                textTransform: "none",
-                fontSize: "1rem",
-                "&:hover": {
-                  background: "linear-gradient(45deg, #3f51b5, #7f00d448)",
-                },
-              }}
-            >
-              View My Work
-            </Button>
+          <Button
+  variant="contained"
+  size="large"
+  sx={{
+    borderRadius: "30px",
+    background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+    px: 4,
+    py: 1.5,
+    textTransform: "none",
+    fontSize: "1rem",
+    "&:hover": {
+      background: "linear-gradient(45deg, #3f51b5, #7f00d448)",
+    },
+  }}
+  onClick={() => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  View My Work
+</Button>
+
           </Grid>
 
           {/* Right Side - Image */}
@@ -142,12 +150,12 @@ const Hero = () => {
     maxWidth: "420px",
     borderRadius: "50%",
     objectFit: "cover",
-    boxShadow: "0 20px 50px rgba(0,0,0,0.6), 0 0 20px rgba(100,100,255,0.3)",
+    boxShadow: "0 20px 50px rgba(0,0,0,0.6), 0 0 20px rgba(207, 113, 42, 0.3)",
     transition: "all 0.5s ease",
     transform: "translateY(0px)",
     "&:hover": {
       transform: "translateY(-10px) scale(1.02)",
-      boxShadow: "0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(100,100,255,0.5)",
+      boxShadow: "0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(181, 100, 29, 0.5)",
     },
   }}
 />

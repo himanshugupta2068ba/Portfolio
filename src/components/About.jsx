@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Box, Grid, Typography, Button,Stack } from "@mui/material";
 import { useNavigate } from "react-router-dom"; // assuming you're using React Router
 
 const About = () => {
@@ -55,9 +55,9 @@ const About = () => {
                 mb: 3,
                 fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem" },
                 pl: 2,
-                borderLeft: "4px solid #8300d4",
+                borderLeft: "4px solid #be7821ff",
                 background:
-                  "linear-gradient(90deg, rgba(131,0,212,0.15), transparent)",
+                 "linear-gradient(90deg, #a57c00, #c68439ff), transparent)",
                 borderRadius: "8px",
                 py: 1.5,
               }}
@@ -89,32 +89,56 @@ const About = () => {
               the tech ecosystem.
             </Typography>
 
-            {/* Resume Button */}
             <Box textAlign="center" mt={4}>
-              <Button
-                onClick={() => navigate("/resume")}
-                sx={{
-                  background:
-                    "linear-gradient(90deg, #8300d4, #ff4ecd)",
-                  color: "white",
-                  fontWeight: "bold",
-                  px: 4,
-                  py: 1.2,
-                  borderRadius: "30px",
-                  fontSize: "1rem",
-                  textTransform: "none",
-                  boxShadow: "0px 4px 15px rgba(131,0,212,0.5)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    background:
-                      "linear-gradient(90deg, #ff4ecd, #8300d4)",
-                    transform: "scale(1.05)",
-                  },
-                }}
-              >
-                View My Resume
-              </Button>
-            </Box>
+      <Stack direction="row" spacing={2} justifyContent="center">
+        {/* View Resume Button */}
+        <Button
+          onClick={() => window.open("/resume.pdf", "_blank")}
+          sx={{
+            background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+            color: "white",
+            fontWeight: "bold",
+            px: 4,
+            py: 1.2,
+            borderRadius: "30px",
+            fontSize: "1rem",
+            textTransform: "none",
+            boxShadow: "0px 4px 15px rgba(209, 120, 37, 0.5)",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              background: "linear-gradient(90deg, #ff4ecd, #8300d4)",
+              transform: "scale(1.05)",
+            },
+          }}
+        >
+          View Resume
+        </Button>
+
+        {/* Download Resume Button */}
+        <Button
+          href="/resume.pdf"
+          download="Himanshu_Gupta_Resume.pdf"
+          sx={{
+            background: "linear-gradient(90deg, #a57c00, #c68439ff)",
+            color: "white",
+            fontWeight: "bold",
+            px: 4,
+            py: 1.2,
+            borderRadius: "30px",
+            fontSize: "1rem",
+            textTransform: "none",
+            boxShadow: "0px 4px 15px rgba(255,78,205,0.5)",
+            transition: "all 0.3s ease",
+            "&:hover": {
+              background: "linear-gradient(90deg, #8300d4, #ff4ecd)",
+              transform: "scale(1.05)",
+            },
+          }}
+        >
+          Download Resume
+        </Button>
+      </Stack>
+    </Box>
           </Grid>
         </Grid>
       </Box>

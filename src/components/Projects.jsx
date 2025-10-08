@@ -119,12 +119,12 @@ const Projects = () => {
                     sx={{
                       mt: 2,
                       alignSelf: "flex-start",
-                      background: "linear-gradient(45deg, #8300d493, #b06cd5ff)",
+                      background: "linear-gradient(90deg, #a57c00, #c68439ff)",
                       color: "white",
                       textTransform: "none",
                       fontWeight: "bold",
                       "&:hover": {
-                        background: "linear-gradient(45deg, #46096fff, #ff33bb)",
+                        background: "linear-gradient(45deg, #46096fff, #a2421cff)",
                       },
                     }}
                   >

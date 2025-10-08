@@ -4,4 +4,66 @@
   /* color: white; */
   background: linear-gradient(135deg, #1f1f1f, #1b1a1a); /* dark theme */
 }
+/* 
+.left-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url("/landing.png");
+}
+.right-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ */
+.left-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-image: url("/landing.png");
+  background-size: cover;
+  background-position: center;
+}
 
+.right-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .left-panel,
+  .right-panel {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .right-panel {
+    order: 1; /* right panel comes first */
+    height: 30vh; /* adjust as needed for content */
+  }
+
+  .left-panel {
+    order: 2; /* image at bottom */
+    height: 70vh; /* image takes 70% of screen height */
+  }
+}

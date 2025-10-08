@@ -23,7 +23,7 @@ const Skills = () => {
   const isXs = useMediaQuery("(max-width:600px)");
   const isSm = useMediaQuery("(max-width:900px)");
 
-  const iconSize = isXs ? 50 : isSm ? 65 : 80;
+  const iconSize = isXs ? 30 : isSm ? 55 : 80;
 
   const skills = [
     { name: "C++", icon: <SiCplusplus size={iconSize} color="#00599C" /> },
@@ -111,7 +111,7 @@ const Skills = () => {
                     color: "white",
                     fontSize: "0.9rem",
                     fontWeight: "bold",
-                    background: "rgba(0,0,0,0.6)",
+                    background: "linear-gradient(90deg, #a57c00, #c68439ff)",
                     padding: "4px 10px",
                     borderRadius: "6px",
                     whiteSpace: "nowrap",
