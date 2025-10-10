@@ -10,7 +10,7 @@ const About = () => {
       id="about"
       sx={{
         minHeight: "100vh",
-        width: "100vw",
+        // minwidth: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

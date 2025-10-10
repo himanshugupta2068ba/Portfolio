@@ -6,19 +6,19 @@ const projects = [
     title: "Portfolio Website",
     description: "A modern portfolio built with React and Material UI.",
     image: "portfolio.png",
-    link: "#",
+    link: "https://himxsportfolio.netlify.app/",
   },
   {
     title: "HIMX Meet",
     description: "Video conferencing app with real-time chat.",
     image: "Himxmeet.png",
-    link: "#",
+    link: "https://himxmeet-video-call-app-frontend.onrender.com",
   },
   {
     title: "Wonder-Lost",
     description: "Hotel booking website with admin panel.",
     image: "wonderlost.png",
-    link: "#",
+    link: "https://github.com/himanshugupta2068ba/Trip-sync",
   },
   // {
   //   title: "Mobile Game",
@@ -34,7 +34,8 @@ const Projects = () => {
       id="projects"
       sx={{
         minHeight: "100vh",
-        width: "100vw",
+        // width: "100vw",
+        // minwidth: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

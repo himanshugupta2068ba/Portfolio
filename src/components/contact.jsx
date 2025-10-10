@@ -41,7 +41,8 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        width: "100vw",
+        // width: "100vw",
+        // minwidth: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

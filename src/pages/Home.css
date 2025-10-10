@@ -1,30 +1,10 @@
 .home {
   min-height: 100vh;
-  width: 100vh;
+  width: 100%;
   /* color: white; */
   background: linear-gradient(135deg, #1f1f1f, #1b1a1a); /* dark theme */
 }
-/* 
-.left-panel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100vh;
-  background-image: url("/landing.png");
-}
-.right-panel {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
- */
+
 .left-panel {
   position: absolute;
   top: 0;
@@ -48,7 +28,7 @@
   align-items: center;
 }
 
-/* Responsive layout for small screens */
+/* Responsive layout for small screens (max-width: 768px) */
 @media (max-width: 768px) {
   .left-panel,
   .right-panel {
@@ -57,13 +37,21 @@
     height: auto;
   }
 
-  .right-panel {
-    order: 1; /* right panel comes first */
-    height: 30vh; /* adjust as needed for content */
+  .left-panel { /* Image Panel (now on top) */
+    order: 1; 
+    height: 60vh; /* Image takes 60% of screen height */
   }
 
-  .left-panel {
-    order: 2; /* image at bottom */
-    height: 70vh; /* image takes 70% of screen height */
+  .right-panel { /* Content Panel (now on bottom) */
+    order: 2; 
+    height: auto; /* Let content dictate height, allowing scroll */
+    min-height: 40vh; /* Ensure a minimum visible area for content */
+    padding: 20px; /* Good practice for mobile content */
+  }
+  .btn {
+    width: 80%; /* Full width buttons on small screens */
+    box-sizing: border-box; /* Include padding/border in width */
+    padding: 10px;
+    margin: 10px 0; /* Vertical spacing between buttons */
   }
 }

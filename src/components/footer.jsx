@@ -10,7 +10,8 @@ export default function Footer() {
   id="contact"
       sx={{
         height: "auto",
-        width: "100vw",          // force full width
+        // width: "100vw",          // force full width
+        // minwidth: "100%",
         position: "relative",
         left: 0,
         bgcolor: "black",
