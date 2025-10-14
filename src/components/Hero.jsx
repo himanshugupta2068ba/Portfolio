@@ -23,7 +23,7 @@ const Hero = () => {
   id="home"
       sx={{
         marginTop: "10px",
-        height: "100vh",
+        // height: "100vh",
         // width: "100vw",
         // minwidth: "100%",
         display: "flex",

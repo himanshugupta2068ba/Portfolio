@@ -9,7 +9,7 @@ const About = () => {
     <Box
       id="about"
       sx={{
-        minHeight: "100vh",
+        // minHeight: "100vh",
         // minwidth: "100%",
         display: "flex",
         alignItems: "center",
