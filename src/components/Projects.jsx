@@ -18,14 +18,14 @@ const projects = [
     title: "Wonder-Lost",
     description: "Hotel booking website with admin panel.",
     image: "wonderlost.png",
-    link: "https://github.com/himanshugupta2068ba/Trip-sync",
+    link: "https://trip-sync.onrender.com/listings",
   },
-  // {
-  //   title: "Mobile Game",
-  //   description: "Puzzle game made with Unity.",
-  //   image: "/projects/game.png",
-  //   link: "#",
-  // },
+  {
+    title: "Slot SWAPEER",
+    description: "Slot swapper machine , swap your slot with your colleagues.",
+    image: "slotswapper.png",
+    link: "https://slotswapper-uzm9.onrender.com",
+  },
 ];
 
 const Projects = () => {

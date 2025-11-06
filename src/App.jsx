@@ -3,7 +3,7 @@ import './App.css'
 import Home from './pages/Home'
 import LandingPage from './pages/landing.jsx'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Resume from './pages/Resume';
+
 function App() {
   const [count, setCount] = useState(0)
 
