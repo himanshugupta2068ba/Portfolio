@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Box, Grid, Typography, Button, Fade } from "@mui/material";
+import LazyImage from "./LazyImage";
 
 const Hero = () => {
   const titles = ["Himanshu", "Full Stack Developer", "Coder", "Designer", "Problem Solver",];
@@ -142,24 +143,34 @@ const Hero = () => {
           </Grid>
 
           {/* Right Side - Image */}
-          <Box
-  component="img"
-  src="/Himanshu2.jpg"
-  alt="Himanshu"
-  sx={{
-    width: { xs: "65%", sm: "55%", md: "70%" },
-    maxWidth: "420px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    boxShadow: "0 20px 50px rgba(0,0,0,0.6), 0 0 20px rgba(207, 113, 42, 0.3)",
-    transition: "all 0.5s ease",
-    transform: "translateY(0px)",
-    "&:hover": {
-      transform: "translateY(-10px) scale(1.02)",
-      boxShadow: "0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(181, 100, 29, 0.5)",
-    },
-  }}
-/>
+          <Grid item xs={12} md={6} sx={{ display: "flex", justifyContent: "center" }}>
+            <Box
+              sx={{
+                width: { xs: "280px", sm: "300px", md: "380px" },
+                height: { xs: "280px", sm: "300px", md: "380px" },
+                borderRadius: "50%",
+                overflow: "hidden",
+                boxShadow: "0 20px 50px rgba(0,0,0,0.6), 0 0 20px rgba(207, 113, 42, 0.3)",
+                transition: "all 0.5s ease",
+                transform: "translateY(0px)",
+                "&:hover": {
+                  transform: "translateY(-10px) scale(1.02)",
+                  boxShadow: "0 30px 60px rgba(0,0,0,0.7), 0 0 30px rgba(181, 100, 29, 0.5)",
+                },
+              }}
+            >
+              <LazyImage
+                src="/Himanshu2.jpg"
+                alt="Himanshu"
+                width="100%"
+                height="100%"
+                sx={{
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
+            </Box>
+          </Grid>
 
         </Grid>
       </Box>

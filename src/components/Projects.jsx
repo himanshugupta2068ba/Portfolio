@@ -1,30 +1,31 @@
 import React from "react";
 import { Box, Grid, Typography, Card, CardContent, CardMedia, Button } from "@mui/material";
+import LazyImage from "./LazyImage";
 
 const projects = [
   {
     title: "Portfolio Website",
     description: "A modern portfolio built with React and Material UI.",
-    image: "portfolio.png",
+    image: "/portfolio.png",
     link: "https://himxsportfolio.netlify.app/",
   },
   {
     title: "HIMX Meet",
     description: "Video conferencing app with real-time chat.",
-    image: "Himxmeet.png",
+    image: "/Himxmeet.png",
     link: "https://himxmeet-video-call-app-frontend.onrender.com",
   },
   {
     title: "Wonder-Lost",
     description: "Hotel booking website with admin panel.",
-    image: "wonderlost.png",
+    image: "/wonderlost.png",
     link: "https://trip-sync.onrender.com/listings",
   },
   {
-    title: "Slot SWAPEER",
-    description: "Slot swapper machine , swap your slot with your colleagues.",
-    image: "slotswapper.png",
-    link: "https://slotswapper-uzm9.onrender.com",
+    title: "Thok-Bazar ",
+    description: "SAAS platform for local products.",
+    image: "/thok-bazar.png",
+    link: "https://thok-bazar.vercel.app",
   },
 ];
 
@@ -83,18 +84,22 @@ const Projects = () => {
                   display: "flex",
                   flexDirection: "column",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  overflow: "hidden",
                   "&:hover": {
                     transform: "translateY(-6px)",
                     boxShadow: "0px 8px 30px rgba(0,0,0,0.6)",
                   },
                 }}
               >
-                <CardMedia
-                  component="img"
-                  height="180"
-                  image={project.image}
-                  alt={project.title}
-                />
+                <Box sx={{ overflow: "hidden", height: "180px" }}>
+                  <LazyImage
+                    src={project.image}
+                    alt={project.title}
+                    height="180px"
+                    aspectRatio="16/9"
+                    sx={{ borderRadius: "18px 18px 0 0" }}
+                  />
+                </Box>
                 <CardContent
                   sx={{
                     flexGrow: 1,
