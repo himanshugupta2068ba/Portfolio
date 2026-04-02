@@ -214,7 +214,7 @@ export default function Footer() {
                 mb: 0.5,
               }}
             >
-              © {new Date().getFullYear()} Himanshu Gupta
+              © 2023-2024 Himanshu Gupta
             </Typography>
             <Typography
               variant="caption"
