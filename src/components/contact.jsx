@@ -40,6 +40,7 @@ const Contact = () => {
 
   return (
     <Box
+      id="contact"
       sx={{
         // width: "100vw",
         // minwidth: "100%",
