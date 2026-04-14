@@ -160,7 +160,7 @@ const Hero = () => {
               }}
             >
               <LazyImage
-                src="/Himanshu2.jpg"
+                src="/Himanshu2.png"
                 alt="Himanshu"
                 width="100%"
                 height="100%"
